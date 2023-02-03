@@ -46,4 +46,9 @@ class ToolsTests(APITestCase):
         force_authenticate(request, user=user)
         response = view(request, tag='node')
         self.assertEqual(response.status_code, 200)
-            
+    
+    def test_auth(self):
+        request = APIRequestFactory().get("")
+        tools_list = ToolsViewSet.as_view({'get': 'list'})
+        response = tools_list(request)
+        self.assertEqual(response.status_code, 401)

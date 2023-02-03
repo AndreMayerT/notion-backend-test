@@ -1,5 +1,7 @@
 > Notion Backend Test
 
+![preview](swagger.png)
+
 Project for the Notion Backend Test made using Django / Django Rest Framework, PostgreSQL.
 
 ## How to Run
